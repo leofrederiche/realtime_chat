@@ -1,0 +1,20 @@
+<section ng-controller='ChatShow as vm'>
+	<h1><%= @chat.title %></h1>
+
+	<p ng-repeat="message in vm.chat.messages">
+		<b>{{message.user}}: </b>{{message.content}}
+	</p>
+
+	<form>
+		Nome: <input type="text" ng-model="vm.message.user">
+		Mensagem: <input type="text" ng-model="vm.message.content">
+		<button ng-click="vm.submit()">Enviar</button>
+
+		{{vm.message}}
+	</form>
+
+	<br><br><br><br>
+	{{vm.messages}}
+
+
+</section>

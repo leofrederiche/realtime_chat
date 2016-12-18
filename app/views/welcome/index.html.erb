@@ -1,0 +1,11 @@
+<section ng-controller='ChatIndex as vm'>
+
+	<h1>CHATs Disponiveis</h1>
+
+	<% @chats.each do |c| %>
+		<p>
+			<%= link_to c.title, chat_path(c.id) %>
+		</p>
+	<% end %>
+
+</section>
